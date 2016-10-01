@@ -1,0 +1,50 @@
+.ccnumber-wrapper{
+    background-color: #eeeeee;
+    padding: 10px;
+    width: 300px;
+    position: relative;
+}
+.ccnumber-wrapper label{
+    margin: 0;
+    text-transform: uppercase;
+}
+.ccnumber-wrapper .form-group{
+    margin: 0;
+}
+#ccnumber{
+    padding-left: 50px;
+    height: 30px;
+}
+.cccards{
+    width: 42px;
+    height: 26px;
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    border-radius: 6px;
+}
+.default-card{
+    background: url(../img/default.png) no-repeat;
+    background-size: 100%;
+}
+.visa {
+    background: url(../img/visa.JPG) no-repeat;
+    background-size: 100%;
+}
+.master {
+    background: url(../img/master.JPG) no-repeat;
+    background-size: 100%;
+}
+.discover {
+    background: url(../img/discover.JPG) no-repeat;
+    background-size: 100%;
+}
+.amex {
+    background: url(../img/amex.JPG) no-repeat;
+    background-size: 100%;
+}
+.maestro {
+    background: url(../img/maestro.png) no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="cccheck">
+<head>
+    <!-- META TAGS -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- TITLE -->
+    <title> Credit Card Checker </title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body >
+<div class="wrapper" ng-controller="ccController">
+
+   <form class="">
+       <div class="ccnumber-wrapper">
+           <div class="form-group">
+               <label>Card Number</label>
+               <input class="form-control" type="text" id="ccnumber" name="ccnumber" ng-model="formData.ccnumber"
+                      credit-card-type>
+                <span class="cccards" ng-class="{'maestro':ccinfo.type==='maestro',
+                    'visa':ccinfo.type==='visa',
+                    'discover':ccinfo.type==='discover','master':ccinfo.type==='master',
+                    'default-card':ccinfo.type==='default'}"></span>
+           </div>
+       </div>
+   </form>
+
+</div>
+
+<script src="bower_components/angular/angular.js" type="text/javascript"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
