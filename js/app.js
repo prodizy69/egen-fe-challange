@@ -8,11 +8,7 @@
     ng.module('cccheck',[])
 
     .controller('ccController',CCController)
-        .controller('creditCardcontroller', function ($scope) {
-            $scope.add = function (a,b) {
-                return a+b;
-            }
-        })
+
     .directive( 'creditCardType', CreditCardType);
 
     CCController.$inject = ['$scope'];

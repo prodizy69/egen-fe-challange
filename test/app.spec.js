@@ -1,29 +1,27 @@
-/**
- * Created by Sateesh on 10/01/2016.
- */
+describe('creditcardDirective', function() {
 
-describe('creditcardType', function () {
+    var element,
+     scope,
+    compiledElement,
+        html;
 
-    beforeEach(function () {
+    beforeEach(function() {
         module('cccheck');
-    });
-    var $controller;
+        html='<credit-card-type  ng-model="formData.ccnumber"></credit-card-type>';
+        // Create a new dependency injector using the 'cccheck' module
 
-    beforeEach(inject(function(_$controller_){
-        // The injector unwraps the underscores (_) from around the parameter names when matching
-        $controller = _$controller_;
-    }));
-
-
-    describe('checking discover type', function() {
-        it('assign a class', function() {
-            var $scope = {};
-
-            var controller = $controller('creditCardcontroller', { $scope: $scope });
-
-            expect($scope.add(3,4)).toEqual(7);
-            //expect($scope.ccinfo.type).toEqual('discover');
-
+        inject(function($rootScope, $compile) {
+            // Get a new scope
+            scope = $rootScope.$new();
+            scope.ccinfo={};
+            scope.formData={ccnumber:"4622715351868171"};
+            // Compile some HTML that uses the directive
+            compiledElement = $compile(html)(scope);
+            scope.$digest();
         });
     });
+
+    it('credit card types', function() {
+        expect(compiledElement.scope().formData.ccnumber).toBe("4622715351868171")
+       });
 });
